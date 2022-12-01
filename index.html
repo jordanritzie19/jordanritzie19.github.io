@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Jordan Ritzie</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/portfolio.css">
+    </head>
+
+    <!-- Body -->
+    <body class="background">
+
+        <!-- navbar -->
+        <div class="navbar">
+            <a class="active" href="#home">Home</a>
+            <a href ="#about">About</a>
+            <a href="#github">Github</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <!-- breaks between navbar and first heading -->
+        <br>
+        <br>
+
+        <!-- Background Video -->
+        <div id="home">
+            <video autoplay muted loop id="home_video">
+                <!-- ensure a video name is actually placed here-->
+                <source src="img/video/videoname" type="video/mp4">
+                <!-- video failure msg below -->
+                Your browser does not support html5 video.
+            </video>
+        </div>
+
+        <!-- Video text -->
+        <div class="home_text">
+            <h1 class="video-text">Jordan Ritzie's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q> enter a quote here
+                        <br> this is line 2
+                        <br> this is line 3
+                    </q>
+                    <br> -author of quote
+                    <br>
+                    <br> My name is Jordan; welcome to my Portfolio
+                    <br>
+                    <br> Thank you for stopping by, enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!-- About -->
+        <div class="row" id="about">
+        <!-- column_2 are the image blocks, column_1 represents text blocks -->    
+            <!-- Left column -->
+            <div class="column_2">
+                <img src="img/picture_here.png" alt="...">
+            </div>
+            <!-- Right column -->
+            <div class="column_1">
+                <h1>About</h1>
+                <p>
+                    text Here
+                    <br>
+                    <br> I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>&apos;s C# and .net Boot Camp, and trained and experienc in th following web and programming languages: HTML, CSS, JavaScript, SQL, C#...
+                    <br>
+                    <br> I am a full-stack developer and would love to work with you on your project. <a href="#contact">Contact</a> me below.
+                </p>
+            </div>
+        </div>
+
+        <!-- github -->
+        <div class="row" id="github">
+            <!-- Left Column -->
+            <div class="column_1">
+                <h1>Github</h1>
+                <p>
+                    You can view my coding projects on my Github profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/jordanritzie19" target="_blank">Jordan Ritzie's github</a></p>
+                </p>
+            </div>
+            <!-- Right Column -->
+            <div class="column_2">
+                <a href="https://github.com/jordanritzie19" target="_blank"><img src="img/GitHub.png" alt="github logo"></a>
+            </div>
+        </div>
+
+        <!-- contact -->
+        <div class="row" id="contact">
+            <!-- left column -->
+            <div class="column_2 column_tall">
+                <img src="img/..." alt="...">
+            </div>
+            <!-- right column (form) -->
+            <div class="column_1 column_tall">
+                <h1>Contact</h1>
+                <form action="https://formspree.io/f/xqkjvdbe" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please put your name here">
+                    <label>Email:</label>
+                        <input type="text" id="email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="message" name="Message" placeholder="Please write your message here">
+                    <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer>
+            <p>
+                <p class="center"> &copy; Prosper Consulting Inc., <a href="https://wwww.learncodinganywhere.com" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+
+    </body>
+</html>
