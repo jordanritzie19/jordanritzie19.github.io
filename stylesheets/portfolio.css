@@ -26,7 +26,7 @@ p {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: justify;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 18px;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -183,7 +183,7 @@ footer {
     width: 50%;
     padding: 10px;
     padding-top: 3%;
-    height: 450px;
+    height: 475px;
     background-color: #f2f2f2;
     align-items: center;
 }
@@ -199,7 +199,7 @@ footer {
     width: 50%;
     padding: 10px;
     padding-top: 1.9%;
-    height: 450px;
+    height: 475px;
     background-color: #4d4d4d;
 }
 
