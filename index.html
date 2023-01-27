@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Jordan Ritzie</title>
+        <link rel="shortcut icon" type="img/jpg" href="img/">
         <link rel="stylesheet" type="text/css" href="stylesheets/portfolio.css">
     </head>
 
@@ -14,14 +15,11 @@
         <!-- navbar -->
         <div class="navbar">
             <a class="active" href="#home">Home</a>
+            <a href="#slideshow">Slideshow</a>
             <a href ="#about">About</a>
             <a href="#github">Github</a>
-            <a href="#contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
-
-        <!-- breaks between navbar and first heading -->
-        <br>
-        <br>
 
         <!-- Background Video -->
         <div id="home">
@@ -50,12 +48,64 @@
             </strong>
         </div>
 
+        <!-- Slideshow -->
+        <div id="slideshow">
+            <div id="slideshow_background">
+                <div id="slideshow_container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="img/linkedin_pfp.png" alt="Self-portrait">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="img/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS logos">
+                        <div class="text">I am a full-stack software developer, <br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="img/Python.png" alt="Python logo">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="img/C_Sharp_and_Dot_NET.png" alt="C# logo">
+                        <div class="text">C#, .NET Framework, ASP.NET, MVC,</div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="img/SQL_and_Database.jpg" alt="SQL logo">
+                        <div class="text">back end development, databases and SQL.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="slideshow_images" src="img/portfolio_email-image.jpg" alt="message alert icon">
+                        <div class="text"><a class="video-text contact" onclick="openForm()">Contact me now!</a></div>
+                    </div>
+                    <!-- Previous and Next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- adds space between slideshow images and dots -->
+
+                <!-- Slideshow dots (another way to navigate slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
         <!-- About -->
         <div class="row" id="about">
         <!-- column_2 are the image blocks, column_1 represents text blocks -->    
             <!-- Left column -->
             <div class="column_2">
-                <img src="img/portfolio_stock-image.jpg" alt="computer screen">
+                <img class="comp" src="img/portfolio_stock-image.jpg" alt="computer screen">
             </div>
             <!-- Right column -->
             <div class="column_1">
@@ -88,33 +138,30 @@
         </div>
 
         <!-- contact -->
-        <div class="row" id="contact">
-            <!-- left column -->
-            <div class="column_2 column_tall">
-                <img src="img/portfolio_email-image.jpg" alt="envelope icon">
-            </div>
-            <!-- right column (form) -->
-            <div class="column_1 column_tall">
-                <h1>Contact</h1>
-                <form action="https://formspree.io/f/xqkjvdbe" method="POST">
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please put your name here">
-                    <label>Email:</label>
-                        <input type="text" id="email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="SUBMIT">
+        <div id="contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xqkjvdbe" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
+        
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
 
         <!-- footer -->
         <footer>
-            <p>
                 <p class="center"> &copy; Prosper Consulting Inc., <a href="https://wwww.learncodinganywhere.com" target="_blank">The Tech Academy</a></p>
-                <br>
-            </p>
         </footer>
-
+        <script src="JS/portfolio.js"></script>
     </body>
 </html>
