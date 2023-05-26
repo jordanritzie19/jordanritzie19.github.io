@@ -1,1 +1,1 @@
-This repository contains my portfolio, including some information about me and a contact form to get in touch with me.
+This repository contains my portfolio, containing information on myself, a method to contact me, and links to my LinkedIn profile and resume
